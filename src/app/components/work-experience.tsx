@@ -1,30 +1,28 @@
+"use client";
+import { motion } from "framer-motion";
+
 const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Innovators Inc.",
-    period: "Jan 2021 - Present",
-    description:
-      "Lead the frontend development team in creating responsive and accessible web applications using React and Next.js.",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Web Solutions Co.",
-    period: "Mar 2018 - Dec 2020",
-    description:
-      "Developed and maintained client websites, focusing on performance optimization and cross-browser compatibility.",
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Digital Creations LLC",
-    period: "Jun 2016 - Feb 2018",
-    description:
-      "Assisted in the development of company websites and web applications using HTML, CSS, and JavaScript.",
+    title: "Junior Frontend Developer",
+    company: "Geecore LLC",
+    link: "https://geecorelimited.com",
+    period: "March 2024 - Present",
+    description: [
+      "Lead the frontend team in the design and development of template websites for an AI-powered web builder project.",
+      "Contributed to the successful development and deployment of the AI-powered web builder",
+      "Designed and built the new company website, improving user experience andaccessibility.",
+    ],
   },
 ];
 
 export default function WorkExperience() {
   return (
-    <div className="mb-8">
+    <motion.div
+      initial={{ opacity: 0, translateX: 50 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 0.6 }}
+      className="mb-8"
+    >
       <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
         Work Experience
       </h2>
@@ -34,18 +32,28 @@ export default function WorkExperience() {
             <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
               {exp.title}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 flex items-center">
+            <a
+              href={exp.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 underline dark:text-gray-400 flex items-center"
+            >
               {exp.company}
-            </p>
+            </a>
             <p className="text-gray-500 dark:text-gray-500 text-sm flex items-center mb-2">
               {exp.period}
             </p>
-            <p className="text-gray-600 dark:text-gray-400">
-              {exp.description}
-            </p>
+            <ul className="text-gray-600 dark:text-gray-400 grid gap-2">
+              {exp.description.map((item, id) => (
+                <li className="flex items-start gap-3 max-w-prose" key={id}>
+                  <div className="mt-3 rounded-full w-1 h-1 bg-gray-400"></div>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -18,7 +19,6 @@ export default function SkillsAndTools() {
     <motion.div
       initial={{ opacity: 0, translateX: 50 }}
       whileInView={{ opacity: 1, translateX: 0 }}
-      viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className="mb-8"
     >

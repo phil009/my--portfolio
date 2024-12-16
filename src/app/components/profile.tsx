@@ -6,6 +6,7 @@ import { profilePic } from "./AppImages";
 
 export default async function Profile() {
   const profile = await fetchGitHubProfile("phil009");
+  console.log(profile.html_url);
 
   return (
     <div className="flex h-full flex-col justify-center items-center">
