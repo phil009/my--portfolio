@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { evenza } from "./AppImages";
 
 interface Project {
   id: number;
@@ -16,7 +19,7 @@ const projects: Project[] = [
     name: "Evenza (Event Management)",
     description:
       "Evenza is an app that makes planning and booking events easy. Whether you're hosting or attending, it helps you create, manage, and enjoy events without the stress. From RSVPs to tickets, everything you need is in one place. Let Evenza make your next event simple and fun!",
-    imageUrl: "/placeholder.svg?height=150&width=300",
+    imageUrl: evenza,
     githubUrl: "https://github.com/yourusername/project1",
     liveUrl: "https://project1.com",
     technologies: ["React", "Tailwind", "Formik"],
@@ -42,7 +45,12 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, translateX: 50 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 0.6 }}
+      className="mt-8 mb-16"
+    >
       <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
         Projects
       </h2>
@@ -55,9 +63,9 @@ export default function Projects() {
             <Image
               src={project.imageUrl}
               alt={project.name}
-              width={300}
-              height={150}
-              className="mb-4 rounded-md"
+              width={500}
+              height={300}
+              className="mb-4 w-full rounded-md"
             />
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
               {project.name}
@@ -98,6 +106,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
