@@ -22,15 +22,15 @@ export default function SkillsAndTools() {
       transition={{ duration: 0.6 }}
       className="mb-8"
     >
-      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+      <h2 className="text-lg sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
         Skills & Tools
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
+          <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
             Skills
           </h3>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc text-sm sm:text-base list-inside">
             {skills.map((skill, index) => (
               <li key={index} className="text-gray-600 dark:text-gray-400">
                 {skill}
@@ -39,10 +39,10 @@ export default function SkillsAndTools() {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
+          <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
             Tools
           </h3>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc text-sm sm:text-base list-inside">
             {tools.map((tool, index) => (
               <li key={index} className="text-gray-600 dark:text-gray-400">
                 {tool}

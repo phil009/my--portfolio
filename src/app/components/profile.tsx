@@ -24,7 +24,7 @@ export default async function Profile() {
       <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
         {profile.name || profile.login}
       </h1>
-      <p className="text-gray-600 dark:text-gray-400 mb-2">{`* ${profile.bio} *`}</p>
+      <p className="text-gray-600 text-center text-sm md:text-base dark:text-gray-400 mb-2">{`* ${profile.bio} *`}</p>
       <span className="flex items-center gap-1 mb-4">
         <Icon icon={"carbon:location"} />
         <p>Calabar, Nigeria</p>
