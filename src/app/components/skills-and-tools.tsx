@@ -12,7 +12,7 @@ const skills = [
   "Tailwind CSS",
 ];
 
-const tools = ["Git", "VS Code", "Webpack", "Jest", "Docker", "Figma"];
+const tools = ["Git", "VS Code", "Webpack", "Jest", "Figma"];
 
 export default function SkillsAndTools() {
   return (

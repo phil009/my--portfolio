@@ -1,16 +1,17 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { evenza } from "./AppImages";
+import { evenza, musicplayer, notion } from "./AppImages";
 
 interface Project {
   id: number;
   name: string;
   description: string;
-  imageUrl: string;
-  githubUrl: string;
+  imageUrl?: StaticImageData;
+  githubUrl?: string;
   liveUrl?: string;
   technologies: string[];
+  finished?: boolean;
 }
 
 const projects: Project[] = [
@@ -20,26 +21,31 @@ const projects: Project[] = [
     description:
       "Evenza is an app that makes planning and booking events easy. Whether you're hosting or attending, it helps you create, manage, and enjoy events without the stress. From RSVPs to tickets, everything you need is in one place. Let Evenza make your next event simple and fun!",
     imageUrl: evenza,
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.com",
+    liveUrl: "https://evenza.vercel.app/",
     technologies: ["React", "Tailwind", "Formik"],
+    finished: false,
   },
   {
     id: 2,
-    name: "Project 2",
-    description: "Description of your second project.",
-    imageUrl: "/placeholder.svg?height=150&width=300",
-    githubUrl: "https://github.com/yourusername/project2",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    name: "Music Player App",
+    description:
+      "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there’s a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
+    imageUrl: musicplayer,
+    githubUrl: "https://github.com/phil009/music-player",
+    liveUrl: "https://music-player-beta-azure.vercel.app/",
+    technologies: ["React", "Howler.js", "Express", "JWT", "MongoDB"],
+    finished: true,
   },
   {
     id: 3,
-    name: "Project 3",
-    description: "Your third project's description.",
-    imageUrl: "/placeholder.svg?height=150&width=300",
-    githubUrl: "https://github.com/yourusername/project3",
+    name: "Notion Clone",
+    description:
+      "This project is a Notion clone built with React, Redux, React Query, and TypeScript for frontend functionality, and a Node.js/Express backend with MongoDB for data storage. It features user authentication, dynamic page management, and a rich text editor for creating and organizing content. Protected routes ensure secure access, while the app offers a clean, responsive UI for productivity and collaboration.",
+    imageUrl: notion,
+    githubUrl: "https://github.com/phil009/notion-clone-frontend",
     liveUrl: "https://project3.com",
-    technologies: ["Angular", "Django", "MySQL"],
+    technologies: ["React", "Redux", "Typescript", "Express", "MongoDB"],
+    finished: false,
   },
 ];
 
@@ -60,13 +66,15 @@ export default function Projects() {
             key={project.id}
             className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
           >
-            <Image
-              src={project.imageUrl}
-              alt={project.name}
-              width={500}
-              height={300}
-              className="mb-4 w-full rounded-md"
-            />
+            {project.imageUrl && (
+              <Image
+                src={project.imageUrl}
+                alt={project.name}
+                width={500}
+                height={300}
+                className="mb-4 w-full rounded-md"
+              />
+            )}
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
               {project.name}
             </h3>
