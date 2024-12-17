@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 const MyIntro = () => {
   const [typing, setTyping] = useState(true);
   return (
-    <p className="text-center mb-4 text-sm">
+    <p className="text-center mb-4 text-xs md:text-sm">
       {typing ? (
         <Typewriter
           words={[

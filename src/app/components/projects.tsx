@@ -57,10 +57,10 @@ export default function Projects() {
       transition={{ duration: 0.6 }}
       className="mt-8 mb-16"
     >
-      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+      <h2 className="text-lg md:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
         Projects
       </h2>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -75,17 +75,17 @@ export default function Projects() {
                 className="mb-4 w-full rounded-md"
               />
             )}
-            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+            <h3 className="text-base sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">
               {project.name}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
+            <p className="text-gray-600 text-sm sm:text-base dark:text-gray-400 mb-4">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-md"
+                  className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs sm:text-sm rounded-md"
                 >
                   {tech}
                 </span>
@@ -96,7 +96,7 @@ export default function Projects() {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-gray-100 text-sm sm:text-base hover:underline"
               >
                 GitHub
               </a>
@@ -105,9 +105,9 @@ export default function Projects() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-gray-100 text-sm sm:text-base hover:underline"
                 >
-                  Live Demo
+                  Live App
                 </a>
               )}
             </div>
