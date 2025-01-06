@@ -1,11 +1,17 @@
 "use client";
+import { useTheme } from "next-themes";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 const MyIntro = () => {
   const [typing, setTyping] = useState(true);
+  const { theme } = useTheme();
   return (
-    <p className="text-center mb-4 text-xs md:text-sm">
+    <p
+      className={`text-center ${
+        theme === "dark" ? "text-white" : "text-gray-800"
+      } mb-4 text-xs md:text-sm`}
+    >
       {typing ? (
         <Typewriter
           words={[

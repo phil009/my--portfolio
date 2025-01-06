@@ -3,10 +3,42 @@ import { fetchGitHubProfile } from "../utils/github";
 import { Icon } from "@iconify/react";
 import MyIntro from "./my-intro";
 import { profilePic } from "./AppImages";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
-export default async function Profile() {
-  const profile = await fetchGitHubProfile("phil009");
-  console.log(profile.html_url);
+interface GitHubProfile {
+  name?: string;
+  login: string;
+  bio?: string;
+  blog?: string;
+  location?: string;
+  html_url: string;
+}
+
+export default function Profile() {
+  const [profile, setProfile] = useState<GitHubProfile | null>(null);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const data = await fetchGitHubProfile("phil009");
+        setProfile(data);
+      } catch (error) {
+        console.error("Failed to fetch GitHub profile:", error);
+      }
+    };
+
+    fetchProfile();
+  }, []);
+
+  if (!profile) {
+    return (
+      <div className="flex h-full flex-col justify-center items-center">
+        <p className="text-gray-600 text-center">Loading profile...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex h-full flex-col justify-center items-center">
@@ -21,13 +53,27 @@ export default async function Profile() {
           />
         </div>
       </div>
-      <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+      <h1
+        className={`text-2xl font-bold mb-2 ${
+          theme === "dark" ? "text-white" : "text-gray-900"
+        }`}
+      >
         {profile.name || profile.login}
       </h1>
-      <p className="text-gray-600 text-center text-sm md:text-base dark:text-gray-400 mb-2">{`* ${profile.bio} *`}</p>
-      <span className="flex items-center gap-1 mb-4">
+      <p
+        className={`${
+          theme === "dark" ? "text-gray-500" : "text-gray-600"
+        } text-center text-sm md:text-base mb-2`}
+      >
+        {`* ${profile.bio || "No bio available"} *`}
+      </p>
+      <span
+        className={`flex ${
+          theme === "dark" ? "text-white" : "text-gray-900"
+        } items-center gap-1 mb-4`}
+      >
         <Icon icon={"carbon:location"} />
-        <p>Calabar, Nigeria</p>
+        <p>{profile.location || "Unknown Location"}</p>
       </span>
       {profile.blog ? (
         <a
@@ -46,15 +92,23 @@ export default async function Profile() {
           href={profile.html_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className={`text-xl hover:underline p-2 rounded-full opacity-85 ${
+            theme === "dark"
+              ? "text-white bg-gray-800"
+              : "text-gray-800 bg-gray-200"
+          }`}
         >
           <Icon icon={"hugeicons:github"} />
         </a>
         <a
-          href={profile.html_url}
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className={`text-xl hover:underline p-2 rounded-full opacity-85 ${
+            theme === "dark"
+              ? "text-white bg-gray-800"
+              : "text-gray-800 bg-gray-200"
+          }`}
         >
           <Icon icon={"teenyicons:linkedin-outline"} />
         </a>

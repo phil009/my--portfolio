@@ -19,7 +19,9 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-md bg-gray-200 dark:bg-gray-800"
+      className={`p-2 rounded-md shadow-md ${
+        theme === "dark" ? "bg-gray-800" : "bg-gray-200 text-gray-800"
+      }`}
     >
       <Icon icon={"line-md:light-dark"} />
     </button>
