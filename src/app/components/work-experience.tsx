@@ -4,13 +4,41 @@ import { useTheme } from "next-themes";
 
 const experiences = [
   {
+    title: "Fullstack Engineer",
+    company: "City Church Calabar",
+    link: "https://citychurchcalabar.org/",
+    period: "January 2025 - Present",
+    description: [
+      "Redesigned and maintained City Church Calabar’s website to improve user experience and enable non-developers to manage content with ease.",
+      "Built a modern, responsive website using Next.js, TypeScript, and Tailwind CSS.",
+      "Integrated a CMS for simple content updates by non-technical users.",
+      "Developed features like online donations, purchasable audio files, and a contact section.",
+      "Delivered a scalable and accessible platform that aligns with the church’s mission.",
+      "Technologies: Next.js, TypeScript, Tailwind CSS, Node.js, CMS (e.g., Sanity/Strapi).",
+    ],
+  },
+  {
+    title: "Lead Frontend Engineer",
+    company: "Copy Trading Markets",
+    link: "https://www.copytradingmarkets.com/",
+    period: "November 2024 - January 2025",
+    description: [
+      "Designed, developed, and currently maintained the full web application for Copy Trading Markets, a cutting-edge cryptocurrency investment platform.",
+      "Implemented real-time copy trading enabling users to mirror trades of experienced investors.",
+      "Integrated secure wallet functionality for cryptocurrency deposits and management.",
+      "Created advanced analytics tools for tracking portfolio performance.",
+      "Built a user-friendly dashboard with robust security measures for safe, transparent transactions.",
+      "Delivered ongoing feature updates, performance optimizations, and ensured a seamless user experience.",
+    ],
+  },
+  {
     title: "Mid-level Frontend Engineer",
     company: "Geecore LLC",
     link: "https://geecorelimited.com",
-    period: "March 2024 - Present",
+    period: "March 2024 - Jan 2025",
     description: [
       "Lead the frontend team in the design and development of template websites for an AI-powered web builder project.",
-      "Contributed to the successful development and deployment of the AI-powered web builder",
+      "Contributed to the successful development and deployment of the AI-powered web builder.",
       "Designed and built the new company website, improving user experience and accessibility.",
     ],
   },
