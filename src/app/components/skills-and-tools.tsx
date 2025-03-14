@@ -10,6 +10,7 @@ const skillsAndTools = [
   { name: "React", icon: "logos:react" },
   { name: "Next.js", icon: "logos:nextjs-icon" },
   { name: "Node.js", icon: "logos:nodejs-icon" },
+  { name: "Express", icon: "skill-icons:expressjs-light" },
   { name: "HTML5", icon: "vscode-icons:file-type-html" },
   { name: "CSS3", icon: "vscode-icons:file-type-css" },
   { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
