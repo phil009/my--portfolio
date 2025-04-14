@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { evenza, musicplayer } from "./AppImages";
+import { citychurch, evenza, musicplayer } from "./AppImages";
 import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react";
 
@@ -19,6 +19,25 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    name: "City Church Site Revamp",
+    description:
+      "Redisgned and rebuilt the City Church website and incorporated features such as live streaming via Youtube, a store for audio messages, integrating paystacks products features, and multiple forms for conatct and group registrations etc.",
+    imageUrl: citychurch,
+    liveUrl: "https://citychurchcalabar.org/",
+    technologies: [
+      "Next.js",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+      "Typescript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+    finished: true,
+  },
+  {
+    id: 2,
     name: "Music Player App",
     description:
       "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there’s a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
@@ -29,7 +48,7 @@ const projects: Project[] = [
     finished: true,
   },
   {
-    id: 2,
+    id: 3,
     name: "Evenza (Event Management)",
     description:
       "Evenza is an app that makes planning and booking events easy. Whether you're hosting or attending, it helps you create, manage, and enjoy events without the stress. From RSVPs to tickets, everything you need is in one place. Let Evenza make your next event simple and fun!",
@@ -70,10 +89,10 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             key={project.id}
             className={`border ${
-              theme === "dark" ? "border-gray-700" : "border-gray-200"
+              theme === "dark" ? "border-gray-700" : "border-gray-500"
             } rounded-lg p-4`}
           >
-            <div className="relative mb-4 w-full overflow-hidden">
+            <div className="relative mb-4 w-full aspect-[4/2] overflow-hidden">
               <div className="absolute top-0 right-0 z-10 flex items-center gap-2 p-2 rounded-lg opacity-80">
                 {project.liveUrl && (
                   <a
@@ -103,7 +122,7 @@ export default function Projects() {
                 )}
               </div>
               {!project.finished && (
-                <div className="absolute bottom-0 right-0 p-2 rounded-ss-lg text-xs font-light italic bg-gray-700 opacity-75">
+                <div className="absolute bottom-0 right-0 p-2 rounded-ss-lg text-xs font-light italic bg-gray-500 opacity-75">
                   in progress
                 </div>
               )}
@@ -124,7 +143,7 @@ export default function Projects() {
             </h3>
             <p
               className={`${
-                theme === "dark" ? "text-gray-400" : "text-gray-600"
+                theme === "dark" ? "text-gray-300" : "text-gray-600"
               } text-xs sm:text-base mb-4`}
             >
               {project.description}
@@ -133,7 +152,7 @@ export default function Projects() {
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs sm:text-sm rounded-md"
+                  className="px-2 py-1 bg-gray-200 bg-opacity-40 dark:bg-gray-700 text-xs sm:text-sm rounded-md"
                 >
                   {tech}
                 </span>

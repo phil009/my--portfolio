@@ -80,7 +80,7 @@ export default function WorkExperience() {
             >
               {exp.company}
             </a>
-            <p className="text-gray-500 dark:text-gray-500 text-xs sm:text-sm flex items-center mb-2">
+            <p className="text-gray-500 dark:text-gray-300 text-xs sm:text-sm flex items-center mb-2">
               {exp.period}
             </p>
             <ul

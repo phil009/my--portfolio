@@ -65,7 +65,7 @@ export default function SkillsAndTools() {
         {skillsAndTools.map((item, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col items-center p-4 rounded-lg ${
+            className={`flex flex-col items-center p-4 rounded-lg bg-opacity-40 ${
               theme === "dark" ? "bg-gray-800" : "bg-gray-100"
             }`}
             variants={itemVariants}

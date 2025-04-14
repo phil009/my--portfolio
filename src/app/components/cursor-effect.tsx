@@ -17,7 +17,7 @@ export default function SearchlightCursor() {
   return (
     <>
       <div
-        className="absolute z-0 opacity-15 inset-0 pointer-events-none"
+        className="absolute z-0 opacity-35 inset-0 pointer-events-none"
         style={{
           background: `radial-gradient(circle 500px at ${position.x}px ${position.y}px, 
                        rgba(255,255,255,0.2) 0%, 
