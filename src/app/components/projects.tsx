@@ -88,7 +88,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 0.6 }}
             key={project.id}
-            className={`border ${
+            className={`border backdrop-blur-md ${
               theme === "dark" ? "border-gray-700" : "border-gray-500"
             } rounded-lg p-4`}
           >

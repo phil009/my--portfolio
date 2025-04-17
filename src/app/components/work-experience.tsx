@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 
@@ -74,11 +75,12 @@ export default function WorkExperience() {
               href={exp.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-blue-500 hover:underline mb-2 ${
+              className={`text-blue-500 hover:underline flex items-center gap-1 mb-2 ${
                 theme === "dark" ? "text-gray-200" : "text-gray-600"
               }`}
             >
               {exp.company}
+              <Icon icon="material-symbols:open-in-new" className="text-sm" />
             </a>
             <p className="text-gray-500 dark:text-gray-300 text-xs sm:text-sm flex items-center mb-2">
               {exp.period}
