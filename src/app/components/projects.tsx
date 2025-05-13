@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { citychurch, evenza, musicplayer } from "./AppImages";
+import { citychurch, evenza, musicplayer, obliquepath } from "./AppImages";
 import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react";
 
@@ -19,6 +19,25 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    name: "Oblique Path",
+    description:
+      "Designed and built a responsive web platform showcasing AI-powered automation solutions for service-based businesses. Integrated real-world client testimonials, case studies, and conversion-focused CTAs. Implemented scalable architecture with SEO-optimized static content and dynamic components..",
+    imageUrl: obliquepath,
+    liveUrl: "https://www.obliquepath.dev/",
+    technologies: [
+      "Next.js",
+      "Tailwind",
+      "Shadcn",
+      "Framer Motion",
+      "Typescript",
+      "Node.js",
+      "Express",
+      "Resend",
+    ],
+    finished: true,
+  },
+  {
+    id: 2,
     name: "City Church Site Revamp",
     description:
       "Redisgned and rebuilt the City Church website and incorporated features such as live streaming via Youtube, a store for audio messages, integrating paystacks products features, and multiple forms for conatct and group registrations etc.",
@@ -37,7 +56,7 @@ const projects: Project[] = [
     finished: true,
   },
   {
-    id: 2,
+    id: 3,
     name: "Music Player App",
     description:
       "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there’s a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
@@ -48,7 +67,7 @@ const projects: Project[] = [
     finished: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Evenza (Event Management)",
     description:
       "Evenza is an app that makes planning and booking events easy. Whether you're hosting or attending, it helps you create, manage, and enjoy events without the stress. From RSVPs to tickets, everything you need is in one place. Let Evenza make your next event simple and fun!",
