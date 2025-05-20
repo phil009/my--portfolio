@@ -5,10 +5,36 @@ import { useTheme } from "next-themes";
 
 const experiences = [
   {
+    title: "Frontend Engineer",
+    company: "Errand",
+    link: "#",
+    period: "April 2025 - Present",
+    description: [
+      "Building a cross-platform parcel delivery app using React Native and TypeScript.",
+      "Implementing real-time tracking with socket.io, map integrations, push notifications, and secure user authentication.",
+      "Assisting with backend development using Node.js, Express, and MongoDB to support order workflows, driver assignments, and user management.",
+      "Developed features like online donations, purchasable audio files, and a contact section.",
+      "Delivered a scalable and accessible platform that aligns with the church’s mission.",
+      "Technologies: React Native, TypeScript, Nativewind, Node.js",
+    ],
+  },
+  {
+    title: "Web Engineer",
+    company: "Oblique Path",
+    link: "https://www.obliquepath.dev",
+    period: "April 2025 - Present",
+    description: [
+      "Built and launched ObliquePath’s official website and currently develop custom sites and web apps for their clients across various industries.",
+      "Collaborate with design and automation teams to deliver responsive, user-focused solutions using React, TypeScript, Tailwind CSS, and Node.js.",
+      "Improved development efficiency with reusable components and boosted client conversions through performance and UX enhancements.",
+      "Technologies: Next.js, TypeScript, Tailwind, Node.js",
+    ],
+  },
+  {
     title: "Fullstack Engineer",
     company: "City Church Calabar",
     link: "https://citychurchcalabar.org/",
-    period: "January 2025 - Present",
+    period: "January 2025 - April 2025",
     description: [
       "Redesigned and maintained City Church Calabar’s website to improve user experience and enable non-developers to manage content with ease.",
       "Built a modern, responsive website using Next.js, TypeScript, and Tailwind CSS.",
