@@ -39,3 +39,40 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# React Native
+/android
+/ios
+.expo
+.expo-shared
+*.keystore
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj
+*.xcuserdata
+*.swm
+*.iml
+*.hprof
+
+# Metro
+metro-cache
+*.log
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Bundler output
+*.bundle
+
+# Misc
+*.apk
+*.ipa
+*.app
+*.map

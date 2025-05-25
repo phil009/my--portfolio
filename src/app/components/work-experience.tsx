@@ -13,8 +13,6 @@ const experiences = [
       "Building a cross-platform parcel delivery app using React Native and TypeScript.",
       "Implementing real-time tracking with socket.io, map integrations, push notifications, and secure user authentication.",
       "Assisting with backend development using Node.js, Express, and MongoDB to support order workflows, driver assignments, and user management.",
-      "Developed features like online donations, purchasable audio files, and a contact section.",
-      "Delivered a scalable and accessible platform that aligns with the church’s mission.",
       "Technologies: React Native, TypeScript, Nativewind, Node.js",
     ],
   },

@@ -34,7 +34,13 @@ export default function Home() {
       {/* Main layout container */}
       <div className="flex flex-col lg:flex-row min-h-screen relative z-10">
         {/* Profile sidebar - fixed on large screens */}
-        <div className="w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 bg-opacity-25 backdrop-blur-sm">
+        <div
+          className={`w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r ${
+            theme == "dark"
+              ? "border-gray-900 bg-gray-900"
+              : "border-gray-200 bg-gray-200"
+          }  bg-opacity-65 backdrop-blur-sm`}
+        >
           <div className="p-8 h-full">
             <Profile />
           </div>
