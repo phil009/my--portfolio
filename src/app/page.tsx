@@ -1,5 +1,4 @@
 "use client";
-import { useTheme } from "next-themes";
 import SearchlightCursor from "./components/cursor-effect";
 import Profile from "./components/profile";
 import Projects from "./components/projects";
@@ -10,11 +9,8 @@ import Image from "next/image";
 import { waterfalls } from "./components/AppImages";
 
 export default function Home() {
-  const { theme } = useTheme();
   return (
-    <div
-      className={`relative ${theme === "dark" ? "bg-gray-900" : "bg-gray-50"}`}
-    >
+    <div className="relative bg-gray-50 dark:bg-gray-900">
       {/* Fixed background image */}
       <div className="fixed inset-0 w-full h-full z-0">
         <Image
@@ -34,13 +30,7 @@ export default function Home() {
       {/* Main layout container */}
       <div className="flex flex-col lg:flex-row min-h-screen relative z-10">
         {/* Profile sidebar - fixed on large screens */}
-        <div
-          className={`w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r ${
-            theme == "dark"
-              ? "border-gray-900 bg-gray-900"
-              : "border-gray-200 bg-gray-200"
-          }  bg-opacity-65 backdrop-blur-sm`}
-        >
+        <div className="w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r border-gray-200 bg-gray-200 dark:border-gray-900 dark:bg-gray-900 bg-opacity-65 backdrop-blur-sm">
           <div className="p-8 h-full">
             <Profile />
           </div>

@@ -21,7 +21,7 @@ export default function RootLayout({
         <AnimatePresence>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >

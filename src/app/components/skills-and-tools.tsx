@@ -1,8 +1,7 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
-import { Icon } from "@iconify/react";
+import { motion } from "framer-motion"
+import { Icon } from "@iconify/react"
 
 const skillsAndTools = [
   { name: "JavaScript", icon: "logos:javascript" },
@@ -19,11 +18,9 @@ const skillsAndTools = [
   { name: "Webpack", icon: "logos:webpack" },
   { name: "Jest", icon: "vscode-icons:file-type-jest" },
   { name: "Figma", icon: "logos:figma" },
-];
+]
 
 export default function SkillsAndTools() {
-  const { theme } = useTheme();
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +29,7 @@ export default function SkillsAndTools() {
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -44,16 +41,11 @@ export default function SkillsAndTools() {
         stiffness: 100,
       },
     },
-  };
+  }
 
   return (
     <section className="mb-8" aria-labelledby="skills-and-tools-title">
-      <h2
-        id="skills-and-tools-title"
-        className={`text-2xl font-bold mb-6 ${
-          theme === "dark" ? "text-white" : "text-gray-800"
-        }`}
-      >
+      <h2 id="skills-and-tools-title" className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
         Skills & Tools
       </h2>
       <motion.div
@@ -65,22 +57,14 @@ export default function SkillsAndTools() {
         {skillsAndTools.map((item, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col items-center p-4 rounded-lg bg-opacity-40 ${
-              theme === "dark" ? "bg-gray-800" : "bg-gray-100"
-            }`}
+            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 bg-opacity-40 dark:bg-gray-800"
             variants={itemVariants}
           >
             <Icon icon={item.icon} className="text-4xl mb-2" />
-            <span
-              className={`text-sm ${
-                theme === "dark" ? "text-gray-300" : "text-gray-700"
-              }`}
-            >
-              {item.name}
-            </span>
+            <span className="text-sm text-gray-700 dark:text-gray-300">{item.name}</span>
           </motion.div>
         ))}
       </motion.div>
     </section>
-  );
+  )
 }

@@ -1,29 +1,27 @@
-"use client";
+"use client"
 
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js"
+import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
-    return null;
+    return null
   }
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className={`p-2 rounded-md shadow-md ${
-        theme === "dark" ? "bg-gray-800" : "bg-gray-200 text-gray-800"
-      }`}
+      className="p-2 rounded-md shadow-md bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white"
     >
       <Icon icon={"line-md:light-dark"} />
     </button>
-  );
+  )
 }
