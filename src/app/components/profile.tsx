@@ -85,13 +85,9 @@ export default function Profile() {
         <Icon icon={"carbon:location"} />
         <p>{profile.location || "Unknown Location"}</p>
       </span>
-      {profile.blog ? (
-        <a href={profile.blog} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mb-2">
-          {profile.blog}
-        </a>
-      ) : (
+   
         <MyIntro />
-      )}
+    
       <div className="flex justify-center gap-1 items-center">
         <a
           href={profile.html_url}
