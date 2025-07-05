@@ -1,7 +1,7 @@
 "use client"
 import Image, { type StaticImageData } from "next/image"
 import { motion } from "framer-motion"
-import { citychurch, evenza, musicplayer, obliquepath } from "./AppImages"
+import { citychurch, evenza, obliquepath } from "./AppImages"
 import { Icon } from "@iconify/react"
 
 interface Project {
@@ -36,17 +36,17 @@ const projects: Project[] = [
     technologies: ["Next.js", "Tailwind", "Shadcn", "Framer Motion", "Typescript", "Node.js", "Express", "MongoDB"],
     finished: true,
   },
-  {
-    id: 3,
-    name: "Music Player App",
-    description:
-      "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there's a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
-    imageUrl: musicplayer,
-    githubUrl: "https://github.com/phil009/music-player",
-    liveUrl: "https://music-player-beta-azure.vercel.app/",
-    technologies: ["React", "Howler.js", "Express", "JWT", "MongoDB"],
-    finished: true,
-  },
+  // {
+  //   id: 3,
+  //   name: "Music Player App",
+  //   description:
+  //     "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there's a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
+  //   imageUrl: musicplayer,
+  //   githubUrl: "https://github.com/phil009/music-player",
+  //   liveUrl: "https://music-player-beta-azure.vercel.app/",
+  //   technologies: ["React", "Howler.js", "Express", "JWT", "MongoDB"],
+  //   finished: true,
+  // },
   {
     id: 4,
     name: "Evenza (Event Management)",

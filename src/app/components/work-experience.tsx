@@ -4,8 +4,35 @@ import { motion } from "framer-motion"
 
 const experiences = [
   {
+    title: "Software Engineer",
+    company: "Telah.ng",
+    link: "https://telah.ng",
+    period: "July 2025 - Present",
+    description: [
+      "Developing and maintaining a comprehensive digital property management platform that serves property managers and tenants across Nigeria.",
+    "Building responsive web applications with automated invoicing, rent tracking, tenant communication systems, and real-time dashboard analytics for property portfolio management.",
+    "Implementing secure user authentication, document management systems, and automated notification features that reduce administrative workload by up to 95%.",
+    "Collaborating with cross-functional teams to deliver seamless integration between property manager and tenant portals, ensuring transparent communication and efficient rent collection processes.",
+    "Optimizing application performance for mobile-first users and ensuring reliable, secure transactions for Nigeria's growing PropTech market.",
+      "Technologies: React, TypeScript, Node.js",
+  ],
+  },
+  {
+    title: "Software Engineer - Contractor",
+    company: "Emergence Technologies Ltd",
+    link: "https://www.linkedin.com/company/emergence-technologies-ltd/",
+    period: "June 2025 - Present",
+    description: [
+      "Developing cutting-edge applications for international clients across various industries and platforms.",
+      "Leading full-stack development projects from initial design concepts through deployment, including UI/UX design, frontend and backend development, comprehensive documentation, and quality assurance testing.",
+      "Building scalable cross-platform solutions using modern technologies including React Native, TypeScript, Node.js, and various database systems.",
+      "Collaborating with global teams to deliver end-to-end digital solutions that meet diverse client requirements and business objectives.",
+      "Technologies: Astro, TypeScript, Supabase",
+    ],
+  },
+  {
     title: "Frontend Engineer",
-    company: "Errand",
+    company: "Velox Delivery",
     link: "#",
     period: "April 2025 - Present",
     description: [
@@ -16,10 +43,10 @@ const experiences = [
     ],
   },
   {
-    title: "Web Engineer",
+    title: "Web Engineer (Contract)",
     company: "Oblique Path",
     link: "https://www.obliquepath.dev",
-    period: "April 2025 - Present",
+    period: "April 2025 - July 2025",
     description: [
       "Built and launched ObliquePath's official website and currently develop custom sites and web apps for their clients across various industries.",
       "Collaborate with design and automation teams to deliver responsive, user-focused solutions using React, TypeScript, Tailwind CSS, and Node.js.",
@@ -28,7 +55,7 @@ const experiences = [
     ],
   },
   {
-    title: "Fullstack Engineer",
+    title: "Fullstack Engineer (Contract)",
     company: "City Church Calabar",
     link: "https://citychurchcalabar.org/",
     period: "January 2025 - April 2025",
@@ -42,7 +69,7 @@ const experiences = [
     ],
   },
   {
-    title: "Lead Frontend Engineer",
+    title: "Lead Frontend Engineer (Contract)",
     company: "Copy Trading Markets",
     link: "https://www.copytradingmarkets.com/",
     period: "November 2024 - January 2025",
@@ -70,22 +97,25 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <motion.div
-      initial={{ opacity: 0, translateX: 50 }}
-      whileInView={{ opacity: 1, translateX: 0 }}
-      transition={{ duration: 0.6 }}
+    <div
       className="mb-8"
     >
       <h2 className="text-lg sm:text-2xl font-bold mb-4 text-gray-800 dark:text-white">Work Experience</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <div key={index} className="border-l-2 border-gray-200 pl-4 ml-2">
+          <motion.div
+            initial={{ opacity: 0, translateX: 50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.6 }}
+            key={index}
+            className="border-l-2 border-gray-200 dark:bg-gray-800/60 bg-gray-100/30 rounded-e-3xl p-4 ml-2"
+          >
             <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-600 dark:text-gray-200">{exp.title}</h3>
             <a
               href={exp.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline flex items-center gap-1 mb-2 text-gray-600 dark:text-gray-200"
+              className="hover:underline flex items-center gap-1 mb-2 text-gray-600 dark:text-gray-200"
             >
               {exp.company}
               <Icon icon="material-symbols:open-in-new" className="text-sm" />
@@ -93,15 +123,15 @@ export default function WorkExperience() {
             <p className="text-gray-500 dark:text-gray-300 text-xs sm:text-sm flex items-center mb-2">{exp.period}</p>
             <ul className="grid gap-2 text-gray-700 dark:text-gray-300">
               {exp.description.map((item, id) => (
-                <li className="flex items-start text-xs sm:text-sm gap-3 max-w-prose" key={id}>
+                <li className="flex items-start text-xs sm:text-sm gap-3" key={id}>
                   <div className="mt-3 rounded-full w-1 h-1 bg-gray-400"></div>
                   {item}
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
