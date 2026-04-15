@@ -104,7 +104,7 @@ export default function Projects() {
                     <motion.div
                         initial={{ opacity: 0, translateX: 50 }}
                         whileInView={{ opacity: 1, translateX: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.25 }}
                         key={project.id}
                         className="border border-gray-500 dark:border-gray-700 rounded-lg p-4 backdrop-blur-md"
                     >
