@@ -6,20 +6,9 @@ import SkillsAndTools from "./components/skills-and-tools";
 import ThemeToggle from "./components/theme-toggle";
 import WorkExperience from "./components/work-experience";
 import Image from "next/image";
-import { dojo, yuji, megumi } from "./components/AppImages";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { dojo } from "./components/AppImages";
 
 export default function Home() {
-    const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    const characterImage = mounted && resolvedTheme === "dark" ? megumi : yuji;
-
     return (
         <div className="relative bg-gray-50 dark:bg-gray-900">
             {/* Fixed background image */}
@@ -45,16 +34,6 @@ export default function Home() {
                     <div className="p-8 h-full relative z-10">
                         <Profile />
                     </div>
-                    {mounted && (
-                        <div className="absolute bottom-0 right-0 translate-x-6 translate-y-6 opacity-70 w-64 h-80 pointer-events-none">
-                            <Image
-                                src={characterImage}
-                                alt="character"
-                                fill
-                                className="object-contain object-bottom"
-                            />
-                        </div>
-                    )}
                 </div>
 
                 {/* Content area - scrollable */}

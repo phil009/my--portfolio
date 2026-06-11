@@ -1,7 +1,7 @@
 "use client";
 import Image, { type StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { citychurch, evenza, nyangu, obliquepath } from "./AppImages";
+import { bhs, citychurch, jigotex, nyangu, obliquepath, tennaa } from "./AppImages";
 import { Icon } from "@iconify/react";
 
 interface Project {
@@ -16,6 +16,42 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        id: 8,
+        name: "Tennaa",
+        description:
+            "Event vendor marketplace platform connecting event planners and clients with vetted service providers in Nigeria. Features vendor discovery with search and filters, rich vendor profiles, a multi-step booking flow, and AI-assisted recommendations — where events come together.",
+        imageUrl: tennaa,
+        liveUrl: "https://tennaa.xyz",
+        technologies: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Radix UI",
+            "React 19",
+        ],
+        finished: false,
+    },
+    {
+        id: 6,
+        name: "Brains Specialist Hospital",
+        description:
+            "Official hospital website built with a focus on SEO performance and organic search visibility — featuring semantic HTML, schema markup, optimized metadata, and a responsive design for local patient discovery.",
+        imageUrl: bhs,
+        liveUrl: "https://brainsspecialisthospital.com.ng",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        finished: true,
+    },
+    {
+        id: 7,
+        name: "Jigotex",
+        description:
+            "Professional portfolio website for Jigotex, a construction company — showcasing projects, services, and contact information with a clean, responsive design.",
+        imageUrl: jigotex,
+        liveUrl: "https://jigotex.com.ng",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        finished: true,
+    },
     {
         id: 3,
         name: "Nyangu",
@@ -69,27 +105,6 @@ const projects: Project[] = [
             "MongoDB",
         ],
         finished: true,
-    },
-    // {
-    //   id: 3,
-    //   name: "Music Player App",
-    //   description:
-    //     "A modern web-based platform designed to make music streaming simple and enjoyable. Users can securely sign up or log in to access a personalized music experience. The app features an intuitive interface, responsive design, and seamless functionality for browsing, playing, and managing songs across devices. For administrators, there's a dedicated feature to upload new songs, ensuring the library remains fresh and up-to-date.",
-    //   imageUrl: musicplayer,
-    //   githubUrl: "https://github.com/phil009/music-player",
-    //   liveUrl: "https://music-player-beta-azure.vercel.app/",
-    //   technologies: ["React", "Howler.js", "Express", "JWT", "MongoDB"],
-    //   finished: true,
-    // },
-    {
-        id: 4,
-        name: "Evenza (Event Management)",
-        description:
-            "Evenza is an app that makes planning and booking events easy. Whether you're hosting or attending, it helps you create, manage, and enjoy events without the stress. From RSVPs to tickets, everything you need is in one place. Let Evenza make your next event simple and fun!",
-        imageUrl: evenza,
-        liveUrl: "https://evenza.vercel.app/",
-        technologies: ["React", "Tailwind", "Formik"],
-        finished: false,
     },
 ];
 

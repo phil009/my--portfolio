@@ -2,6 +2,9 @@
 import { useState } from "react"
 import { Typewriter } from "react-simple-typewriter"
 
+const introText =
+  "Results-driven Fullstack Engineer with extensive experience architecting and delivering enterprise-grade web applications. I lead technical initiatives, mentor development teams, and build scalable PropTech, FinTech, and SaaS platforms using React, Next.js, TypeScript, and Node.js — serving thousands of users across multiple markets."
+
 const MyIntro = () => {
   const [typing, setTyping] = useState(true)
 
@@ -9,9 +12,7 @@ const MyIntro = () => {
     <p className="text-center text-gray-800 dark:text-white mb-4 text-xs md:text-sm">
       {typing ? (
         <Typewriter
-          words={[
-            "I'm a frontend engineer who loves bringing ideas to life on the web. I focus on creating clean, responsive designs that look great and feel even better to use. I'm always learning new things, tackling challenges, and striving to make every project better than the last. Take a look at my work—let's create something awesome together!",
-          ]}
+          words={[introText]}
           loop={1}
           cursor
           cursorStyle="_"
@@ -20,7 +21,7 @@ const MyIntro = () => {
           delaySpeed={1000}
         />
       ) : (
-        "I'm a frontend engineer who loves bringing ideas to life on the web. I focus on creating clean, responsive designs that look great and feel even better to use. I'm always learning new things, tackling challenges, and striving to make every project better than the last. Take a look at my work—let's create something awesome together!"
+        introText
       )}
     </p>
   )

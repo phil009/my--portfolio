@@ -6,8 +6,9 @@ import { AnimatePresence } from "framer-motion";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Phil009 Portfolio",
-  description: "GitHub-themed portfolio for Phil009",
+  title: "Philip N. Ogboh | Fullstack Engineer",
+  description:
+    "Portfolio of Philip N. Ogboh — Fullstack Engineer, Frontend Specialist, and Founder. Building PropTech, FinTech, and SaaS platforms with React, Next.js, and TypeScript.",
 };
 
 export default function RootLayout({
