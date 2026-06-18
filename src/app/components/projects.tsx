@@ -121,7 +121,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, translateX: 0 }}
                         transition={{ duration: 0.25 }}
                         key={project.id}
-                        className="border border-gray-500 dark:border-gray-700 rounded-lg p-4 backdrop-blur-md"
+                        className="border border-gray-500 dark:border-gray-700 rounded-lg p-4 backdrop-blur-md bg-white/70 dark:bg-gray-900/70"
                     >
                         <div className="relative mb-4 w-full aspect-[4/2] overflow-hidden">
                             <div className="absolute top-0 right-0 z-10 flex items-center gap-2 p-2 rounded-lg opacity-80">

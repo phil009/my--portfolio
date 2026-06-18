@@ -59,7 +59,7 @@ export default function SkillsAndTools() {
         {skillsAndTools.map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 bg-opacity-40 dark:bg-gray-800"
+            className="flex flex-col items-center p-4 rounded-lg bg-gray-100 bg-opacity-80 dark:bg-gray-800"
             variants={itemVariants}
           >
             <Icon icon={item.icon} className="text-4xl mb-2" />

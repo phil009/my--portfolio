@@ -22,12 +22,12 @@ export default function Profile() {
             <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                 Philip N. Ogboh
             </h1>
-            <p className="text-gray-600 dark:text-gray-500 text-center text-sm md:text-base mb-2">
-                Fullstack Engineer · Frontend Specialist · Founder & Co-Founder
+            <p className="text-gray-600 dark:text-gray-300 text-center text-sm md:text-base mb-2">
+                Fullstack Engineer · Frontend Specialist
             </p>
             <span className="flex text-gray-900 dark:text-white items-center gap-1 mb-4">
                 <Icon icon={"carbon:location"} />
-                <p>Lagos / Kaduna, Nigeria</p>
+                <p>Kaduna, Nigeria</p>
             </span>
 
             <MyIntro />

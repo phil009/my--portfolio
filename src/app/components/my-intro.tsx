@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Typewriter } from "react-simple-typewriter"
 
 const introText =
-  "Results-driven Fullstack Engineer with extensive experience architecting and delivering enterprise-grade web applications. I lead technical initiatives, mentor development teams, and build scalable PropTech, FinTech, and SaaS platforms using React, Next.js, TypeScript, and Node.js — serving thousands of users across multiple markets."
+  "Fullstack Engineer with 3+ years of experience building production-grade web applications across PropTech, FinTech, and SaaS. I lead frontend teams, ship scalable systems, and deliver across the full stack. Expert in React, Next.js, TypeScript, and Node.js."
 
 const MyIntro = () => {
   const [typing, setTyping] = useState(true)

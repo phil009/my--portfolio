@@ -6,7 +6,7 @@ import SkillsAndTools from "./components/skills-and-tools";
 import ThemeToggle from "./components/theme-toggle";
 import WorkExperience from "./components/work-experience";
 import Image from "next/image";
-import { dojo } from "./components/AppImages";
+import { pattern } from "./components/AppImages";
 
 export default function Home() {
     return (
@@ -14,7 +14,7 @@ export default function Home() {
             {/* Fixed background image */}
             <div className="fixed inset-0 w-full h-full z-0">
                 <Image
-                    src={dojo || "/placeholder.svg"}
+                    src={pattern || "/placeholder.svg"}
                     alt="background"
                     fill
                     className="object-cover opacity-25"
@@ -30,7 +30,7 @@ export default function Home() {
             {/* Main layout container */}
             <div className="flex flex-col lg:flex-row min-h-screen relative z-10">
                 {/* Profile sidebar - fixed on large screens */}
-                <div className="w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r border-gray-200 bg-gray-200 dark:border-gray-900 dark:bg-gray-900 bg-opacity-65 backdrop-blur-sm relative overflow-hidden">
+                <div className="w-full lg:w-1/3 lg:fixed lg:inset-y-0 lg:left-0 h-auto lg:h-full border-b lg:border-r border-gray-200 bg-gray-200/90 dark:border-gray-900 dark:bg-gray-900/90 bg-opacity-90 backdrop-blur-sm relative overflow-hidden">
                     <div className="p-8 h-full relative z-10">
                         <Profile />
                     </div>
@@ -40,9 +40,9 @@ export default function Home() {
                 <div className="w-full lg:w-2/3 lg:ml-[33.333333%] relative overflow-x-hidden">
                     <div className="p-4 lg:p-8">
                         <div className="grid gap-8 mt-8 pb-16">
-                            <WorkExperience />
-                            <SkillsAndTools />
                             <Projects />
+                            <SkillsAndTools />
+                            <WorkExperience />
                         </div>
                     </div>
                 </div>
