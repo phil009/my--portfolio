@@ -8,6 +8,7 @@ import nyangu from "../assets/nyangu.png";
 import bhs from "../assets/brains-specialist-hospital.png";
 import jigotex from "../assets/jigotex.png";
 import tennaa from "../assets/tennaa.png";
+import virtualCardDashboard from "../assets/virtual-card-dashboard.png";
 
 export {
     profilePic,
@@ -20,4 +21,5 @@ export {
     bhs,
     jigotex,
     tennaa,
+    virtualCardDashboard,
 };

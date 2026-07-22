@@ -1,7 +1,15 @@
 "use client";
 import Image, { type StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { bhs, citychurch, jigotex, nyangu, obliquepath, tennaa } from "./AppImages";
+import {
+    bhs,
+    citychurch,
+    jigotex,
+    nyangu,
+    obliquepath,
+    tennaa,
+    virtualCardDashboard,
+} from "./AppImages";
 import { Icon } from "@iconify/react";
 
 interface Project {
@@ -16,6 +24,16 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        id: 9,
+        name: "Virtual Card Dashboard",
+        description:
+            "A fintech dashboard concept for managing a virtual payment card, an NGN wallet, and transaction history. Features a masked/revealable virtual card with freeze toggle, wallet balance with quick actions, spend-vs-limit tracking, and filterable transaction history — inspired by Misan by Bamboo's mobile app.",
+        imageUrl: virtualCardDashboard,
+        liveUrl: "https://virtual-card-dashboard-chi.vercel.app/",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        finished: true,
+    },
     {
         id: 8,
         name: "Tennaa",
