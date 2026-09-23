@@ -82,7 +82,7 @@ export default function WorkExperience() {
                         animate={{ opacity: 1, translateX: 0 }}
                         transition={{ duration: 0.25 }}
                         key={index}
-                        className="border-l-2 border-gray-200 dark:bg-gray-800/85 bg-gray-100/70 rounded-e-3xl p-4 ml-2"
+                        className="border-l-2 border-gray-200 dark:bg-gray-900/85 bg-gray-100/70 rounded-e-3xl p-4 ml-2"
                     >
                         <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-600 dark:text-gray-200">
                             {exp.title}

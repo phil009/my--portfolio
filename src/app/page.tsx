@@ -5,23 +5,10 @@ import Projects from "./components/projects";
 import SkillsAndTools from "./components/skills-and-tools";
 import ThemeToggle from "./components/theme-toggle";
 import WorkExperience from "./components/work-experience";
-import Image from "next/image";
-import { pattern } from "./components/AppImages";
 
 export default function Home() {
     return (
-        <div className="relative bg-gray-50 dark:bg-gray-900">
-            {/* Fixed background image */}
-            <div className="fixed inset-0 w-full h-full z-0">
-                <Image
-                    src={pattern || "/placeholder.svg"}
-                    alt="background"
-                    fill
-                    className="object-cover opacity-25"
-                    priority
-                />
-            </div>
-
+        <div className="relative bg-gray-50 dark:bg-gray-800">
             {/* Theme toggle */}
             <div className="fixed z-50 top-8 right-12">
                 <ThemeToggle />

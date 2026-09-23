@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
     bhs,
     citychurch,
-    jigotex,
+    hygen,
     nyangu,
     obliquepath,
     tennaa,
@@ -24,6 +24,24 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        id: 10,
+        name: "HYGEN",
+        description:
+            "Full-stack service dispatch and payments platform for a Nigerian hygiene and facility-services company, built solo end to end. Clients request services and pay itemized quotes via Paystack (including recurring subscriptions), admins price, dispatch staff by LGA coverage, and track revenue, while field staff sign in by magic link to manage assigned jobs. Built on a Postgres Row-Level Security model with 15 transactional emails across three portals.",
+        imageUrl: hygen,
+        liveUrl: "https://hygen.com.co",
+        technologies: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Supabase",
+            "Paystack",
+            "Resend",
+            "Framer Motion",
+        ],
+        finished: true,
+    },
     {
         id: 9,
         name: "Virtual Card Dashboard",
@@ -57,16 +75,6 @@ const projects: Project[] = [
             "Official hospital website built with a focus on SEO performance and organic search visibility — featuring semantic HTML, schema markup, optimized metadata, and a responsive design for local patient discovery.",
         imageUrl: bhs,
         liveUrl: "https://brainsspecialisthospital.com.ng",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-        finished: true,
-    },
-    {
-        id: 7,
-        name: "Jigotex",
-        description:
-            "Professional portfolio website for Jigotex, a construction company — showcasing projects, services, and contact information with a clean, responsive design.",
-        imageUrl: jigotex,
-        liveUrl: "https://jigotex.com.ng",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
         finished: true,
     },
